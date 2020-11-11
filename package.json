@@ -6,6 +6,11 @@
   "author": "epaew <epaew.333@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "migration:generate": "prisma migrate dev --create-only --preview-feature",
+    "migration:run": "prisma migrate dev --preview-feature",
+    "migration:run:production": "prisma migrate deploy --preview-feature"
+  },
   "dependencies": {
     "@prisma/cli": "2.15.0",
     "@prisma/client": "2.15.0",
