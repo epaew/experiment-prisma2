@@ -1,0 +1,9 @@
+{
+  "name": "experiment-prisma2",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "repository": "git@github.com:epaew/experiment-prisma2.git",
+  "author": "epaew <epaew.333@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
