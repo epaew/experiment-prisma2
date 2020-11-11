@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://app:password@db/development
+      NODE_ENV: development
+    volumes:
+      - .:/app:cached
+      - /app/node_modules
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: development
+      TZ: Asia/Tokyo
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data: {}
